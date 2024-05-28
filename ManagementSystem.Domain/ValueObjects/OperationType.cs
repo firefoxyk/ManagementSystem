@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ManagementSystem.Domain.ValueObjects
+﻿namespace ManagementSystem.Domain.ValueObjects
 {
     public partial record OperationType
     {
@@ -15,14 +9,14 @@ namespace ManagementSystem.Domain.ValueObjects
         }
         public Value? EnumValue { get; }
         private OperationType(Value enumValue) => EnumValue = enumValue;
-        public static OperationType? Create(Value value)
+        public static OperationType Create(string value)
         {
-            if (!Enum.IsDefined(typeof(Value), value))
+            if (!Enum.TryParse<Value>(value, true, out var enumValue))//спросить тут
             {
                 return null;
             }
 
-            return new OperationType(value);
+            return new OperationType(enumValue);
         }
     }
 }

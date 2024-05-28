@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ManagementSystem.Domain.Announcement
+namespace ManagementSystem.Domain.Comments
 {
-    public record class AnnouncementlId(Guid Value)
+    public record class CommentId(Guid Value)
     {
 
     }

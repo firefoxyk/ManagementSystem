@@ -1,20 +1,18 @@
 ﻿using ManagementSystem.Domain.Primitives;
 using ManagementSystem.Domain.Users;
 
-namespace ManagementSystem.Domain.Announcement
+namespace ManagementSystem.Domain.Entities.Announcement
 {
-    public class Announcement : AggregateRoot
+    public class Announcement
     {
-        private Announcement(AnnouncementlId announcementlId, string announcementHeadline, string announcementBody, Guid createdByUserId)
+        private Announcement(string announcementHeadline, string announcementBody, Guid createdByUserId)
         {
-            IdAnnouncement = announcementlId;
+            IdAnnouncement = Guid.NewGuid();
             AnnouncementHeadline = announcementHeadline;
             AnnouncementBody = announcementBody;
             CreatedByUserId = createdByUserId;
         }
-        private Announcement()
-        { }
-        public AnnouncementlId IdAnnouncement { get; set; }
+        public Guid IdAnnouncement { get; set; }
         public string AnnouncementHeadline { get; set; }
         public string AnnouncementBody { get; set; }
         public Guid CreatedByUserId { get; set; }

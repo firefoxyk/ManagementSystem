@@ -1,14 +1,13 @@
 ﻿namespace ManagementSystem.Domain.Balance
 {
     using ManagementSystem.Domain.Primitives;
-    using ManagementSystem.Domain.Users;
     using ManagementSystem.Domain.ValueObjects;
 
     public sealed class Balance : AggregateRoot
     {
-        public Balance(BalanceId balanceId, OperationType operationType, decimal amount, string operationDescription) 
+        public Balance(BalanceId id, OperationType operationType, decimal amount, string operationDescription) 
         {
-            BalanceId = balanceId;
+            BalanceId = id;
             OperationType = operationType;
             Amount = amount;
             OperationDescription = operationDescription;
