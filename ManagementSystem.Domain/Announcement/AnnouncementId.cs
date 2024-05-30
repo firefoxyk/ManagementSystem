@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagementSystem.Domain.Announcement
 {
-    internal class AnnouncementId
+    public record class AnnouncementId(Guid Value)
     {
     }
 }

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ManagementSystem.Domain.Poll
+﻿namespace ManagementSystem.Domain.Poll
 {
-    internal interface IPollRepository
+    public interface IPollRepository
     {
+        Task Add(Poll poll);
+        Task Remove(Poll poll);
+        Task Edit(Poll poll);
+        Task<Poll> Get(PollId id);
+        Task<List<Poll>> GetAll();
     }
 }

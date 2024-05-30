@@ -5,7 +5,7 @@ namespace ManagementSystem.Domain.Announcement
 {
     public class Announcement : AggregateRoot
     {
-        private Announcement(AnnouncementId id,string announcementHeadline, string announcementBody, Guid createdByUserId)
+        private Announcement(AnnouncementId id,string headline, string body, Guid createdByUserId)
         {
             Id = id;
             Headline = headline;
@@ -16,6 +16,5 @@ namespace ManagementSystem.Domain.Announcement
         public string Headline { get; set; }
         public string Body { get; set; }
         public Guid CreatedByUserId { get; set; }
-        public User CreatedByUser { get; set; }
     }
 }

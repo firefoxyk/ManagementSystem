@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ManagementSystem.Domain.Announcement
 {
-    internal interface IAnnouncementRepository
+    public interface IAnnouncementRepository
     {
+        Task Add(Announcement announcement);
     }
 }

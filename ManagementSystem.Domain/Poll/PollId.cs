@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagementSystem.Domain.Poll
 {
-    internal class PollId
+    public record class PollId(Guid Value)
     {
     }
 }

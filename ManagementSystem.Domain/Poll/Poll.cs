@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ManagementSystem.Domain.Entities.Poll
+namespace ManagementSystem.Domain.Poll
 {
     public class Poll//переделай на агрегат
     {
@@ -14,7 +14,7 @@ namespace ManagementSystem.Domain.Entities.Poll
             PollHeadline = pollHeadline;
             PollBody = pollBody;
             PollAnswerOptions = pollAnswerOptions;
-            
+
             PollVotes = new int[pollAnswerOptions.Length, 0];// Инициализировать массив голосов нулями
         }
         public Guid IdPoll { get; set; }
@@ -25,7 +25,7 @@ namespace ManagementSystem.Domain.Entities.Poll
 
         public static Poll Create(string pollHeadline, string pollBody, string[] pollAnswerOptions)
         {
-            if (string.IsNullOrEmpty(pollHeadline) || string.IsNullOrEmpty(pollBody) || (pollAnswerOptions == null || pollAnswerOptions.Length == 0))
+            if (string.IsNullOrEmpty(pollHeadline) || string.IsNullOrEmpty(pollBody) || pollAnswerOptions == null || pollAnswerOptions.Length == 0)
             {
                 return null;
             }

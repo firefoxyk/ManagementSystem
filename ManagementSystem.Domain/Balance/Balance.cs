@@ -7,7 +7,7 @@
     {
         public Balance(BalanceId id, OperationType operationType, decimal amount, string operationDescription) 
         {
-            BalanceId = id;
+            Id = id;
             OperationType = operationType;
             Amount = amount;
             OperationDescription = operationDescription;
@@ -15,7 +15,7 @@
         private Balance()
         { }
 
-        public BalanceId BalanceId { get; private set; }
+        public BalanceId Id { get; private set; }
         public OperationType OperationType { get; private set; }
         public decimal Amount { get; private set; }
         public string OperationDescription { get; private set; }
