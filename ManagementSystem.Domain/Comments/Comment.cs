@@ -11,18 +11,16 @@
 
         public Comment(CommentId id, Guid appealId, Guid userId, string body)
         {
-            CommentId = id;
+            Id = id;
             AppealId = appealId;
             UserId = userId;
             Body = body;
             Date = DateTime.Now;
         }
 
-        public CommentId CommentId { get; set; }
+        public CommentId Id { get; set; }
         public Guid AppealId { get; set; }
-        public Appeal Appeal { get; set; }
         public Guid UserId { get; set; }
-        public User User { get; set; }
         public string Body { get; set; }
         public DateTime Date { get; set; }
     }

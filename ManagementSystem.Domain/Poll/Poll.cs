@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagementSystem.Domain.Entities.Poll
 {
-    public class Poll
+    public class Poll//переделай на агрегат
     {
         private Poll(string pollHeadline, string pollBody, string[] pollAnswerOptions)
         {

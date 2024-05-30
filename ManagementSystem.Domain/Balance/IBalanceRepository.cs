@@ -2,7 +2,7 @@
 {
     public interface IBalanceRepository
     {
-        Task<Balance?> GetByIdAsync(BalanceId id);
+        //Task<Balance?> GetByIdAsync(BalanceId id);
         Task Add(Balance balance);
     }
 }

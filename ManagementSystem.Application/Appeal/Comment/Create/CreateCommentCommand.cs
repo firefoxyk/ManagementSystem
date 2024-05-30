@@ -8,5 +8,5 @@
         Guid AppealId,
         Guid UserId,
         string Body
-        ) : IRequest<Unit>;//спроси тут
+        ) : IRequest<Unit>;
 }

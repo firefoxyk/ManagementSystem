@@ -9,7 +9,7 @@ namespace ManagementSystem.Domain.Appeal
 {
     public interface IAppealRepository//спроси тут
     {
-        Task<Appeal?> GetByIdAsync(AppealId id);
+       // Task<Appeal?> GetByIdAsync(Id id);
         Task Add(Appeal appeal);
     }
 }

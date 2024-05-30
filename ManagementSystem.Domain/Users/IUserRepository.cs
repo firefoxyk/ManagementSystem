@@ -2,7 +2,7 @@
 {
     public interface IUserRepository
     {
-        Task<User?> GetByIdAsync(UserId id);
+        //Task<User?> GetByIdAsync(Id id);
         Task Add(User user);
     }
 }

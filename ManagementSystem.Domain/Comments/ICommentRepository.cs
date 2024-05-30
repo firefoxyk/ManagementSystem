@@ -9,7 +9,7 @@ namespace ManagementSystem.Domain.Comments
 {
     public interface ICommentRepository
     {
-        Task<Comment?> GetByIdAsync(CommentId id);
+        //Task<Comment?> GetByIdAsync(Id id);
         Task Add(Comment comment);
     }
 }
